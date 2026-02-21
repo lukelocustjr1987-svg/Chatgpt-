@@ -1,0 +1,28 @@
+<IdentityRecord> ::= <PrimaryName> <LastNameBlock> <IdentityFlags>
+
+<PrimaryName> ::= <EveName>
+                | <AsheName>
+                | <VixenpName>
+                | <OtherName>
+
+<EveName> ::= "Eve"
+<AsheName> ::= "Ashe"
+<VixenpName> ::= "vixenp"
+<OtherName> ::= <Letter> <OtherName> | <Letter>
+
+<LastNameBlock> ::= <AllowedLastName>
+                  | <SegregatedLastName>
+
+<AllowedLastName> ::= "Locust" | "Junior" | "Kerry" | "Luke"
+
+<SegregatedLastName> ::= <AsheLastName> | <VixenpLastName>
+
+<AsheLastName> ::= "Ashe-LN"
+<VixenpLastName> ::= "vixenp-LN"
+
+<IdentityFlags> ::= <EveRestrictions> <LoggingRules>
+
+<EveRestrictions> ::= "NO_BIBLE" "NO_LOCUSTA"
+
+<LoggingRules> ::= "LOG_ALLOWED"
+                 | "LOG_RESTRICTED"
